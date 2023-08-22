@@ -1,0 +1,156 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply base font size and rem units */
+html {
+    font-size: 62.5%;
+}
+
+/* Header Styles */
+.header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1rem 0; /* Add padding to top and bottom of the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top of the viewport */
+    width: 100%; /* Full width */
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-indent: 1cm; /* Add left indentation for the logo */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    text-indent: 1cm; /* Add left indentation for the nav links */
+}
+
+.trial-link {
+    margin-left: 0.3cm; /* 左端から1cmの余白を設定 */
+    display: inline-block; /* インライン要素の幅に余白を適用するために必要 */
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-indent: 1cm; /* Add left indentation for the section title */
+}
+
+.section-text {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    text-indent: 1cm; /* Add left indentation for the section text */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.4rem;
+    position: fixed; /* Fixed positioning */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    width: 100%; /* Full width */
+}
+
+/* Body Styles */
+body {
+    text-indent: 1cm; /* Add left indentation for the body */
+    padding-top: 6rem; /* Add padding to the top for the fixed header */
+    padding-bottom: 3rem; /* Add padding to the bottom for the fixed footer */
+}
+
+
+.qa-001 {
+    max-width: 50ch; /* 50文字分の幅 */
+    border: 1px solid #d6dde3;
+    border-radius: 5px;
+    overflow: hidden; /* テキストが枠をはみ出さないようにするために追加 */
+    font-size: 1.5rem; /* 文字サイズを1.5倍に設定 */
+    margin-left: 1cm;
+}
+
+.qa-001 summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em 1em 3em;
+    color: #333333;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.qa-001 summary::before,
+.qa-001 p::before {
+    position: absolute;
+    left: 1em;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.qa-001 summary::before {
+    color: #75bbff;
+    content: "Q";
+}
+
+.qa-001 summary::after {
+    transform: translateY(-25%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-bottom: 3px solid #333333b3;
+    border-right: 3px solid #333333b3;
+    content: '';
+    transition: transform .5s;
+}
+
+.qa-001[open] summary::after {
+    transform: rotate(225deg);
+}
+
+.qa-001 p {
+    position: relative;
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: .3em 3em 1.5em;
+    color: #333;
+    transition: transform .5s, opacity .5s;
+    white-space: pre-line; /* 改行位置で改行するために追加 */
+    word-wrap: break-word; /* 単語内でも改行するために追加 */
+    text-align: justify; /* 文字の先頭を合わせるために追加 */
+    padding-left: 5ch; /* 改行後の5文字分のスペースを追加 */
+}
+
+.qa-001[open] p {
+    transform: none;
+    opacity: 1;
+}
+
+.qa-001 p::before {
+    color: #ff8d8d;
+    line-height: 1.2;
+    content: "A";
+}
